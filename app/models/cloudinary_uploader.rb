@@ -13,19 +13,19 @@ class CloudinaryUploader < CarrierWave::Uploader::Base
 
   # These are the versions defined in Spree::Image
   version :mini do
-    process :resize_to_pad => [48, 48]
+    process :resize_and_pad => [48, 48]
   end
 
   version :small do
-    process :resize_to_pad => [100, 100]
+    process :resize_and_pad => [100, 100]
   end
 
   version :product do
-    process :resize_to_pad => [240, 240]
+    process :resize_and_pad => [240, 240]
   end
 
   version :large do
-    process :resize_to_pad => [600, 600]
+    process :resize_and_pad => [600, 600]
   end
 
   def file?
