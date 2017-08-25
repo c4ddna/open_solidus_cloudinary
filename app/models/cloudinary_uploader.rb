@@ -21,7 +21,7 @@ class CloudinaryUploader < CarrierWave::Uploader::Base
   end
 
   version :product do
-    process :resize_and_pad => [240, 240]
+    process :resize_and_pad => [300, 300]
   end
 
   version :large do
